@@ -47,7 +47,6 @@ TESTING_PACKAGES = [
 
 CONSOLE_SCRIPTS = [
     'gen_client = apitools.gen.gen_client:main',
-    'oauth2l = apitools.scripts.oauth2l:main',
 ]
 
 py_version = platform.python_version()
@@ -55,7 +54,7 @@ py_version = platform.python_version()
 if py_version < '2.7':
     REQUIRED_PACKAGES.append('argparse>=1.2.1')
 
-_APITOOLS_VERSION = '0.5.3'
+_APITOOLS_VERSION = '0.5.4'
 
 with open('README.rst') as fileobj:
     README = fileobj.read()
