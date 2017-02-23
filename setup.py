@@ -29,14 +29,14 @@ except ImportError:
 # Python version and OS.
 REQUIRED_PACKAGES = [
     'httplib2>=0.8',
-    'oauth2client>=1.5.2',
+    'oauth2client>=1.5.2,<4.0.0dev',
     'setuptools>=18.5',
     'six>=1.9.0',
     ]
 
 CLI_PACKAGES = [
     'google-apputils>=0.4.0',
-    'python-gflags>=2.0',
+    'python-gflags==3.0.6',  # Starting version 3.0.7 py26 is not supported.
 ]
 
 TESTING_PACKAGES = [
@@ -54,7 +54,7 @@ py_version = platform.python_version()
 if py_version < '2.7':
     REQUIRED_PACKAGES.append('argparse>=1.2.1')
 
-_APITOOLS_VERSION = '0.5.4'
+_APITOOLS_VERSION = '0.5.7'
 
 with open('README.rst') as fileobj:
     README = fileobj.read()
